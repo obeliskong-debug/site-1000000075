@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://images.matris.ai" crossorigin>
+    <link rel="preload" as="image" fetchpriority="high" href="https://images.matris.ai/sites/1000000075/media/p1/hero-bg-xl.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Marius Popescu - Avocat de Drept Penal | Reprezentare Juridică</title>
+    <meta name="description" content="Avocat specializat în dreptul penal cu peste 10 ani de experiență. Reprezentare profesională și consultații juridice pentru cazuri complexe.">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="light">
+    <meta property="og:title" content="Marius Popescu - Avocat de Drept Penal">
+    <meta property="og:description" content="Cu peste 10 ani de experiență în dreptul penal, vă ofer asistență juridică profesională și reprezentare de încredere.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.matris.ai/sites/1000000075/media/p1/hero-bg-xl.jpg">
+    <style>
+        :root {
+            --bs-primary: #1e3a8a;
+            --bs-secondary: #64748b;
+            --bs-body-color: #1f2937;
+            --bs-body-bg: #ffffff;
+            --bs-border-color: #e5e7eb;
+            --bs-border-radius: 8px;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            text-wrap: balance;
+        }
+
+        p {
+            text-wrap: pretty;
+        }
+
+        a:focus-visible {
+            outline: 3px solid var(--bs-primary);
+            outline-offset: 2px;
+        }
+
+        button:focus-visible {
+            outline: 3px solid var(--bs-primary);
+            outline-offset: 2px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--bs-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Navigation */
+        .navbar {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--bs-primary) !important;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            transition: color 0.2s ease;
+            touch-action: manipulation;
+        }
+
+        .nav-link:hover {
+            color: var(--bs-primary) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.matris.ai/sites/1000000075/media/p1/hero-bg-xl.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subheadline {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* CTA Button */
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            touch-action: manipulation;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #1e40af;
+            border-color: #1e40af;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .btn-primary:hover {
+                transform: translateY(-2px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Section Styling */
+        section {
+            scroll-margin-top: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            font-size: 1.0625rem;
+            color: var(--bs-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* About Section */
+        .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--bs-primary);
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        /* Services Section */
+        .service-card {
+            padding: 2rem;
+            border: 1px solid var(--bs-border-color);
+            border-radius: 8px;
+            height: 100%;
+            transition: box-shadow 0.2s ease, border-color 0.2s ease;
+            touch-action: manipulation;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: var(--bs-primary);
+        }
+
+        .service-card h3 {
+            color: var(--bs-primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .service-card p {
+            color: var(--bs-secondary);
+            margin: 0;
+        }
+
+        /* Process Section */
+        .process-step {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            padding: 0;
+        }
+
+        .step-number {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--bs-primary), #1e40af);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+
+        .step-content h3 {
+            color: var(--bs-primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+        }
+
+        .step-content p {
+            color: var(--bs-secondary);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            position: relative;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('https://images.matris.ai/sites/1000000075/media/p1/cta-bg-xl.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 58, 138, 0.85);
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            font-size: 1.0625rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            padding: 2rem;
+            background-color: #f9fafb;
+            border-radius: 8px;
+            border-left: 4px solid var(--bs-primary);
+        }
+
+        .contact-item h3 {
+            color: var(--bs-primary);
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-item p {
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .contact-item a {
+            color: var(--bs-primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bs-primary);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.25rem;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+            touch-action: manipulation;
+        }
+
+        .social-link:hover {
+            background-color: #1e40af;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .social-link:hover {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--bs-border-color);
+            background-color: #f9fafb;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9375rem;
+            color: var(--bs-secondary);
+        }
+
+        /* Reveal Animation */
+        .js-anim .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+        }
+
+        .js-anim .reveal.visible {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Below-fold Content Optimization */
+        section:not(.hero):not(.cta-section) {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 600px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .process-step {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .step-number {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .cta-section {
+                min-height: 350px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Ensure contrast */
+        body {
+            color: #1f2937;
+        }
+
+        .section-subtitle, .service-card p, .step-content p, .contact-item p {
+            color: #64748b;
+        }
+    </style>
+  <script type="application/ld+json" data-matris-jsonld>
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Marius Popescu - Avocat",
+  "url": "https://1000000075.site.matris.ai",
+  "description": "Sunt un avocat de drept penal cu peste 10 ani experienta",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2822 Strada Primaverii Bucuresti"
+  },
+  "telephone": "+40123456789",
+  "email": "marius@gmail.com",
+  "image": "https://images.matris.ai/sites/1000000075/media/p1/hero-bg-xl.jpg",
+  "sameAs": [
+    "https://facebook.com/marius",
+    "https://instagram.com/marius",
+    "https://linkedin.com/marius",
+    "https://youtube.com/marius"
+  ],
+  "inLanguage": "ro"
+}
+</script>
+</head>
+<body>
+    <a href="#main" class="skip-link">Sari la conținut</a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Marius Popescu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Acasă</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Despre</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Servicii</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Proces</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-content">
+                <h1>Marius Popescu - Avocat de Drept Penal</h1>
+                <p class="hero-subheadline">Cu peste 10 ani de experiență în dreptul penal, vă ofer asistență juridică profesională și reprezentare de încredere în cele mai complexe cazuri.</p>
+                <a href="#contact" class="btn btn-primary btn-lg">Programează o consultație</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-5" id="about">
+            <div class="container">
+                <div class="row align-items-center gap-4">
+                    <div class="col-lg-6 reveal">
+                        <img src="https://images.matris.ai/sites/1000000075/media/p1/about-image-xl.jpg" alt="Consultație juridică profesională cu documente legale și simboluri de justiție" width="600" height="450" class="about-image" loading="lazy" decoding="async">
+                    </div>
+                    <div class="col-lg-6 reveal">
+                        <h2 class="section-title">Experiență și Profesionalism în Dreptul Penal</h2>
+                        <p class="section-subtitle">De peste un deceniu îmi dedic cariera apărării drepturilor clienților mei în domeniul dreptului penal. Am reprezentat cu succes sute de cazuri, de la contravenții minore până la infracțiuni complexe. Abordarea mea se bazează pe cunoștințe juridice solide, atenție la detalii și o înțelegere profundă a sistemului judiciar român.</p>
+                        <ul class="feature-list">
+                            <li>Peste 10 ani de experiență specializată în drept penal</li>
+                            <li>Reprezentare profesională în toate instanțele</li>
+                            <li>Consultații juridice detaliate și strategii personalizate</li>
+                            <li>Abordare dedicată pentru fiecare caz în parte</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-5 bg-light" id="services">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Servicii Juridice Specializate</h2>
+                    <p class="section-subtitle">Ofer asistență juridică completă în toate aspectele dreptului penal, cu focus pe protejarea drepturilor și intereselor clienților mei.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="service-card">
+                            <h3>Apărare în Cauze Penale</h3>
+                            <p>Reprezentare profesională în toate fazele procesului penal, de la cercetarea penală până la judecarea în instanță.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="service-card">
+                            <h3>Consultații Juridice</h3>
+                            <p>Analiză detaliată a situației juridice și consiliere pentru cele mai bune strategii de apărare.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="service-card">
+                            <h3>Asistență în Ancheta Penală</h3>
+                            <p>Îndrumarea clienților în timpul cercetărilor penale și protejarea drepturilor în această fază critică.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 reveal">
+                        <div class="service-card">
+                            <h3>Recurse și Contestații</h3>
+                            <p>Formularea și susținerea recursurilor și contestațiilor pentru obținerea celor mai favorabile soluții.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="py-5" id="process">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Cum Lucrez cu Clienții Mei</h2>
+                    <p class="section-subtitle">Un proces structurat pentru a vă oferi cea mai bună reprezentare juridică posibilă.</p>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="process-step reveal">
+                            <div class="step-number">01</div>
+                            <div class="step-content">
+                                <h3>Consultația Inițială</h3>
+                                <p>Analizăm împreună situația dvs. juridică și evaluăm toate aspectele cazului pentru a stabili strategia optimă.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="step-number">02</div>
+                            <div class="step-content">
+                                <h3>Analiza Dosarului</h3>
+                                <p>Studiez în detaliu toate documentele și probele, identificând punctele forte și slăbiciunile cazului.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="step-number">03</div>
+                            <div class="step-content">
+                                <h3>Strategia de Apărare</h3>
+                                <p>Dezvolt o strategie personalizată de apărare, adaptată specificului cazului dvs. și obiectivelor propuse.</p>
+                            </div>
+                        </div>
+                        <div class="process-step reveal">
+                            <div class="step-number">04</div>
+                            <div class="step-content">
+                                <h3>Reprezentarea în Instanță</h3>
+                                <p>Vă reprezint profesional în toate procedurile legale, menținând comunicarea constantă despre evoluția cazului.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section py-5" id="cta">
+            <div class="cta-content reveal">
+                <h2>Aveți Nevoie de Asistență Juridică?</h2>
+                <p>Nu lăsați situația să se înrăutățească. Contactați-mă astăzi pentru o consultație profesională și aflați cum vă pot ajuta să vă protejați drepturile.</p>
+                <a href="tel:+40123456789" class="btn btn-primary btn-lg">Contactează-mă Acum</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-5" id="contact">
+            <div class="container">
+                <div class="text-center mb-5 reveal">
+                    <h2 class="section-title">Contact</h2>
+                    <p class="section-subtitle">Sunt disponibil pentru consultații și pot fi contactat prin orice dintre metodele de mai jos. Răspund prompt la toate solicitările.</p>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item reveal">
+                        <h3>Email</h3>
+                        <p><a href="mailto:marius@gmail.com">marius@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item reveal">
+                        <h3>Telefon</h3>
+                        <p><a href="tel:+40123456789">+40 123 456 789</a></p>
+                    </div>
+                    <div class="contact-item reveal">
+                        <h3>Adresă</h3>
+                        <p>2822 Strada Primăverii<br>București</p>
+                    </div>
+                </div>
+                <div class="text-center reveal">
+                    <h3 class="mb-3">Urmărește-mă pe rețelele de socializare</h3>
+                    <div class="social-links">
+                        <a href="https://facebook.com/marius" class="social-link" aria-label="Facebook">f</a>
+                        <a href="https://instagram.com/marius" class="social-link" aria-label="Instagram">📷</a>
+                        <a href="https://linkedin.com/marius" class="social-link" aria-label="LinkedIn">in</a>
+                        <a href="https://youtube.com/marius" class="social-link" aria-label="YouTube">▶</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 Marius Popescu - Avocat. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        document.documentElement.classList.add('js-anim');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
